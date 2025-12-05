@@ -1,0 +1,129 @@
+<meta charset="UTF-8">
+<br>
+Page not found.
+<br>
+Go back <a href='/'><b>home</b></a>?
+<br>
+<br>
+
+
+
+
+
+<script>
+    
+    function similarity (u, v){
+        var sum = 0;
+        var total = 0;
+        for (var i=0; i<u.length; i++){
+            for (var j=0; j<v.length; j++){
+                if (u[i] == v[j]){
+                    sum++;
+                }                
+            }
+            total++;
+        }
+        for (var j=0; j<v.length; j++){
+            for (var i=0; i<u.length; i++){            
+                if (u[i] == v[j]){
+                    sum++;
+                }                
+            }
+            total++;
+        }
+        console.log(u + ' ' + v + ' ' + sum + '/' + total + '=' + sum/total)
+        return sum/total;
+    }
+    
+    var sitemap = [];
+sitemap.push('http://raphsilva.github.io/projects');
+sitemap.push('http://raphsilva.github.io/projects/cos');
+sitemap.push('http://raphsilva.github.io/projects/cos/index.html');
+sitemap.push('http://raphsilva.github.io/projects/msc');
+sitemap.push('http://raphsilva.github.io/projects/msc/index.html');
+sitemap.push('http://raphsilva.github.io/events');
+sitemap.push('http://raphsilva.github.io/events/nilc25');
+sitemap.push('http://raphsilva.github.io/events/nilc25/archive');
+sitemap.push('http://raphsilva.github.io/events/nilc25/index.html');
+sitemap.push('http://raphsilva.github.io/files');
+sitemap.push('http://raphsilva.github.io/files/ProjetoPedagogicoEngCompUFMS2016.pdf');
+sitemap.push('http://raphsilva.github.io/files/curriculo.pdf');
+sitemap.push('http://raphsilva.github.io/utilities');
+sitemap.push('http://raphsilva.github.io/utilities/minimax.html');
+sitemap.push('http://raphsilva.github.io/utilities/minimax_simulator');
+sitemap.push('http://raphsilva.github.io/portpholio');
+sitemap.push('http://raphsilva.github.io/portpholio/potenciaMIPS');
+sitemap.push('http://raphsilva.github.io/portpholio/potenciaMIPS/PotenciaMIPS.pdf');
+sitemap.push('http://raphsilva.github.io/portpholio/potenciaMIPS/index.html');
+sitemap.push('http://raphsilva.github.io/portpholio/poster_ERI_2013');
+sitemap.push('http://raphsilva.github.io/portpholio/poster_ERI_2013/poster_ERI_2013_Raphael.pdf');
+sitemap.push('http://raphsilva.github.io/portpholio/poster_ERI_2013/index.html');
+sitemap.push('http://raphsilva.github.io/portpholio/spi');
+sitemap.push('http://raphsilva.github.io/portpholio/spi/spi.pdf');
+sitemap.push('http://raphsilva.github.io/portpholio/spi/index.html');
+sitemap.push('http://raphsilva.github.io/portpholio/monografia');
+sitemap.push('http://raphsilva.github.io/portpholio/monografia/monografia.pdf');
+sitemap.push('http://raphsilva.github.io/portpholio/monografia/index.html');
+sitemap.push('http://raphsilva.github.io/portpholio/poster_EPPC2017');
+sitemap.push('http://raphsilva.github.io/portpholio/poster_EPPC2017/poster_EPPC2017_Raphael.pdf');
+sitemap.push('http://raphsilva.github.io/portpholio/poster_EPPC2017/thumb.svg');
+sitemap.push('http://raphsilva.github.io/portpholio/poster_EPPC2017/index.html');
+sitemap.push('http://raphsilva.github.io/portpholio/poster_EPPC2017/thumb.png');
+sitemap.push('http://raphsilva.github.io/portpholio/slides_NILC_25');
+sitemap.push('http://raphsilva.github.io/portpholio/slides_NILC_25/RAPHAEL_nilc25.pdf');
+sitemap.push('http://raphsilva.github.io/portpholio/index.html');
+sitemap.push('http://raphsilva.github.io/portpholio/contapali');
+sitemap.push('http://raphsilva.github.io/portpholio/contapali/palindromos_cpp.txt');
+sitemap.push('http://raphsilva.github.io/portpholio/contapali/palindromos_sol.txt');
+sitemap.push('http://raphsilva.github.io/portpholio/contapali/palindromos.pdf');
+sitemap.push('http://raphsilva.github.io/portpholio/contapali/ContandoPalindromos.pdf');
+sitemap.push('http://raphsilva.github.io/portpholio/contapali/palindromos_in.txt');
+sitemap.push('http://raphsilva.github.io/portpholio/contapali/index.html');
+sitemap.push('http://raphsilva.github.io/index_pt.html');
+sitemap.push('http://raphsilva.github.io/index.html');
+    
+    
+    
+    curLocation = window.location;
+    thisAddress = curLocation.href;
+    
+    //console.log(thisAddress);
+    
+    alreadyPut = new Array(sitemap.length).fill(0);
+     
+
+    possibleSearches = thisAddress.split('/');
+    for (i=0; i<possibleSearches.length; i++){
+        s = possibleSearches[i].split('.')[0];
+        if (s == location.protocol || s == location.host || s.length < 2)
+            continue;        
+        //console.log('s: '+s);
+        
+        for (p=0; p<sitemap.length; p++) {
+            sitemapEntryPieces = sitemap[p].split('/');
+            for (j=0; j<sitemapEntryPieces.length; j++) {                
+                t = sitemapEntryPieces[j];
+                //console.log('t: '+t);
+                if (t == location.protocol || t == location.host || t.length < 2)
+                    continue;
+                score = similarity(s,t); 
+                if (score > 0.5 && alreadyPut[p] == 0){
+                    alreadyPut[p] = 1;
+                    document.write("<br>Maybe you're looking for: <b> <a href='" + sitemap[p] + "'>" + sitemap[p] + "</a></b><br>");
+                    //console.log("FOUND  " + s + t)
+                    break;
+                }
+                
+            }
+        }
+        
+        
+    }
+    
+    
+    
+    
+   
+    
+    
+</script>

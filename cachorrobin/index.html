@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKJ6GVB8TX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKJ6GVB8TX');
+</script>
+</head>
+
+<style>
+    table, th, td {
+      /* border: 5px solid gray; */
+      border-bottom: 1px solid green;
+      align-items: center;
+      text-align: center;
+      padding: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      max-width: 1000px;
+    }
+
+    h1 {
+      margin-top: 100px;
+      padding-top: 22px;
+      border-top: 3px dotted gray;
+    }
+
+    .button {
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 4px 2px;
+    border-radius: 20px;
+    }
+
+    .buy {
+      background-color: #4CAF50;
+    }
+
+    pr{
+        font-weight: bold;
+        font-size: 140%;
+    }
+
+    pr::before {
+  content: "R$ ";
+  font-size: 60%;
+  font-weight: normal;
+}
+
+    .thumbnail {
+    max-height: 200px;
+    }
+
+    .logo {
+        max-height: 50px;
+        max-width: 90px;
+    }
+
+    body{
+        text-align: center;
+        text-decoration: none;
+        font-family: Helvetica, sans-serif;
+        font-size: 16pt;
+        margin-bottom: 200px;
+    }
+
+    .center {
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    p{
+      width: 80%;
+      max-width: 60ex;
+      text-align: justify;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 135%;
+    }
+
+
+
+</style>
+
+<header>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-194284280-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-194284280-1');
+</script>
+
+  <script>
+    /**
+    * Função que acompanha um clique em um link externo no Google Analytics.
+    * Essa função processa uma string de URL válida como um argumento e usa essa string de URL
+    * como o rótulo do evento. Ao definir o método de transporte como 'beacon', o hit é enviado
+    * usando 'navigator.sendBeacon' em um navegador compatível.
+    */
+    var captureOutboundLink = function(url) {
+       ga('send', 'event', 'outbound', 'click', url, {
+         'transport': 'beacon',
+         'hitCallback': function(){document.location = url;}
+       });
+    }
+    </script>
+    <title>O Cachorro Bin</title>
+</header>
+
+<body>
+
+  <img src="capa_e.jpg" style="max-height: 700px; max-width: 80%; margin: 20px;">
+  <p>
+    Bin é um doguinho cuja melhor qualidade não é ser um bom garoto, mas sim ser um companheiro que
+     enche de agitação a vida de seus humanos. Ele é descrito em um poema de 64 versos narrado por 
+     uma criança cheia de sentimentos que tem Bin como seu melhor amigo. O livrinho foi feito para 
+     encantar pessoas de todas as idades. 
+  </p> 
+
+  <br>
+
+  <a href="redirect/amostra.html" class="button" style="background-color: olive;">Ver uma amostra</a>
+  <br>
+  <br>
+  <a href="redirect/baixar.html" class="button" style="background-color: darkgreen;">Baixar o livro grátis</a>
+  <br>
+  <br>
+  <a href="redirect/doar.html" class="button" style="background-color: darkorange;">Doar o livro para uma criança</a>
+  <br>
+  <br>
+  <a href="redirect/contato.html" class="button" style="background-color: rgb(92, 92, 202);">Contato</a>
+  <br>
+  <br>
+  <p style="font-size: 80%;">
+    Livro novo. 20 páginas. 20x20 cm.
+<br>
+Livro totalmente ilustrado e colorido, com um poema infantil de 16 estrofes e mais 
+3 páginas de texto didático e atividades sobre interpretação de texto e análise de 
+poesia. Ideal para crianças de 6 a 10 anos. Editora Viseu, 2021.
+  </p>
+
+  <h1>Comprar direto com o autor<br>em Campo Grande (MS) ou São Carlos (SP)</h1>
+    <p>Se solicitado, pode ser incluir autógrafo do autor ou mensagem personalizada.</p>
+    <table class="center">
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr> 
+          <td><img class="thumbnail" src="pictures/bgb.jpg"> </td>
+          <td>1 unidade</td>
+          <td><pr>27</pr></td>
+          <td><a href="redirect/comprar_autor_1.html" class="button buy">Mensagem</button>
+          </td>
+        </tr>
+        <tr> 
+          <td><img class="thumbnail" src="pictures/a_bgb.jpg"> </td>
+          <td>5 unidades</td>
+          <td><pr>110</pr></td>
+          <td><a href="redirect/comprar_autor_5.html" class="button buy">Mensagem</button>
+          </td>
+        </tr>
+      </table>
+
+
+<h1>Comprar com frete incluso para todo o Brasil</h1>
+<p>Se solicitado, pode ser incluir autógrafo do autor ou mensagem personalizada.</p>
+<table class="center">
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr> 
+      <td><img class="thumbnail" src="pictures/bgb.jpg"> </td>
+      <td>1 unidade</td>
+      <td><pr>32</pr></td>
+      <td><a href="redirect/comprar_brasil_1.html" class="button buy">Mensagem</button>
+      </td>
+    </tr>
+    <tr> 
+      <td><img class="thumbnail" src="pictures/a_bgb.jpg"> </td>
+      <td>5 unidades</td>
+      <td><pr>120</pr></td>
+      <td><a href="redirect/comprar_brasil_5.html" class="button buy">Mensagem</button>
+      </td>
+    </tr>
+  </table>
+  
+   
+  
+  <h1>Comprar em lojas online</h1>
+
+    <table class="center">
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr> 
+          <td><img class="thumbnail" src="pictures/bgw.jpg"> </td>
+          <td><img class='logo' src="logos/olx.png"></td>
+          <td><pr>27</pr></td>
+          <td><a href="redirect/comprar_OLX.html" class="button buy">Comprar</button>
+          </td>
+        </tr>
+        <tr> 
+          <td><img class="thumbnail" src="pictures/bgb.jpg"> </td>
+          <td><img class='logo' src="logos/mercadolivre.jpg"></td>
+          <td><pr>33</pr></td>
+          <td><a href="redirect/comprar_mercadolivre.html" class="button buy">Comprar</button>
+          </td>
+        </tr>
+        <tr> 
+          <td><img class="thumbnail" src="pictures/bgw.jpg"> </td>
+          <td><img class='logo' src="logos/amazon.png"></td>
+          <td><pr>33</pr></td>
+          <td><a href="redirect/comprar_amazon.html" class="button buy">Comprar</button>
+          </td>
+        </tr>
+        <!-- <tr> 
+          <td><img class="thumbnail" src="pictures/capa.jpg"> </td>
+          <td><img class='logo' src="logos/viseu.png"></td>
+          <td><pr>33</pr></td>
+          <td><a href="https://www.eviseu.com/pt/livros/1690/o-cachorro-bin/" class="button buy">Comprar</button>
+          </td>
+        </tr> -->
+        <tr> 
+          <td><img class="thumbnail" src="pictures/capa.jpg"> </td>
+          <td><img class='logo' src="logos/submarino.png"></td>
+          <td><pr>35</pr></td>
+          <td><a href="redirect/comprar_submarino.html" class="button buy">Comprar</button>
+          </td>
+        </tr>
+        <tr> 
+          <td><img class="thumbnail" src="pictures/capa.jpg"> </td>
+          <td><img class='logo' src="logos/americanas.jpg"></td>
+          <td><pr>37</pr></td>
+          <td><a href="redirect/comprar_americanas.html" class="button buy">Comprar</button>
+          </td>
+        </tr>
+      </table>
+
+      <h1>Comprar 10 unidades</h1>
+
+      <table class="center">
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr> 
+          <td><img class="thumbnail" src="pictures/a_bgb.jpg"> </td>
+          <td><img class='logo' src="logos/olx.png"></td>
+          <td><pr>230</pr></td>
+          <td><a href="redirect/comprar_a_OLX.html" class="button buy">Comprar</button>
+          </td>
+        </tr>
+        <tr> 
+          <td><img class="thumbnail" src="pictures/a_bgw.jpg"> </td>
+          <td><img class='logo' src="logos/mercadolivre.jpg"></td>
+          <td><pr>275</pr></td>
+          <td><a href="redirect/comprar_a_mercadolivre.html" class="button buy">Comprar</button>
+          </td>
+        </tr>
+      </table>
+
+  <h1>E-book</h1>
+
+  <a href="redirect/ebook.html" class="button buy">Comprar e-book</a>
+  <br>
+    
+
+</body>
+
